@@ -43,10 +43,6 @@ network<-function(t, state, parameters) {
     #Results are returned as a list
     return(list(derivatives))})}
 
-
-
-
-
 simulateMutant<-function(mutant.rules, variables,deriv.vars,node.value, i, x,time, parameters, filename, current.node){
 mutant.rules<-unlist(mutant.rules)
 
@@ -83,10 +79,10 @@ mutant.rules<-unlist(mutant.rules)
 }
 
 mutantAnalysis<-function(rules, node.names, network.name, type=c("overexp", "null"), realizations, time,  parameters){
-cat(type)
+#cat(type)
 if(missing(node.names)){
-  node.names<-c("Akt","B9","Bach2","Bcl2","Bcl6","Bcl11b","BCR","Blimp1","CD4","CD8","CD19","Dll1","Ebf1","EOMES","ERK","Flt3","Flt3L","Foxp3","FR4","GATA3","Gfi1","Gzmb","HEB","Helios","Hoxa9","IFNb","IFNbR","IFNg","IFNgR","Ikaros","IL2","IL2R","IL4","IL4R","IL6","IL6R","IL7","IL7R","IL10","IL10R","IL12","IL12R","IL17","IL18","IL18R","IL21","IL21R","IL23","IL23R","IL27","IL27R","IRAK","Irf4","JAK1","JAK3","NFkB","NFAT","Notch1","Pax5","Prf1","PU1","RORgt","Runx1","Runx3","SMAD2","SMAD3","SOCS1","STAT1","STAT3","STAT4","STAT5","STAT6","Tbet","TCF1","TCR","TGFb","TGFbR","ThPOK","TNFa","TNFR2","XBP1")
-
+  #node.names<-c("Akt","B9","Bach2","Bcl2","Bcl6","Bcl11b","BCR","Blimp1","CD4","CD8","CD19","Dll1","Ebf1","EOMES","ERK","Flt3","Flt3L","Foxp3","FR4","GATA3","Gfi1","Gzmb","HEB","Helios","Hoxa9","IFNb","IFNbR","IFNg","IFNgR","Ikaros","IL2","IL2R","IL4","IL4R","IL6","IL6R","IL7","IL7R","IL10","IL10R","IL12","IL12R","IL17","IL18","IL18R","IL21","IL21R","IL23","IL23R","IL27","IL27R","IRAK","Irf4","JAK1","JAK3","NFkB","NFAT","Notch1","Pax5","Prf1","PU1","RORgt","Runx1","Runx3","SMAD2","SMAD3","SOCS1","STAT1","STAT3","STAT4","STAT5","STAT6","Tbet","TCF1","TCR","TGFb","TGFbR","ThPOK","TNFa","TNFR2","XBP1")
+  stop("Please supply a vector of node names")
 }
 
 if(match.arg(type)=="overexp"){
